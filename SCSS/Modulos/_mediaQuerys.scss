@@ -1,0 +1,119 @@
+/* MEDIA QUERYS */
+$desktop: 1200px;
+$desktop2: 1110px;
+$tablet: 720px;
+$phone: 360px;
+
+
+@mixin mediaQuerys($estilos){
+    @media(max-width: $estilos){
+        @content;
+    }
+}
+
+
+/* DESCKTOP */
+@include mediaQuerys($desktop){
+    .about{
+        &__container{
+            .contenedor{
+                order: 1;
+                flex: 0 0 100% !important;
+                margin: 50px 0;
+            }
+    
+            .contImg{
+                orphans: 0;
+                flex: 0 0 100% !important;
+                margin: 50px 0;
+    
+                img{
+                    width: 100%;
+                    height: 550px;
+                }
+            }
+        }
+    
+    
+    .icono{
+        width: 100% !important;
+    }
+}
+}
+
+
+@include mediaQuerys($desktop2){
+    .footer{
+    
+        .info{
+            .icono{
+                @include icono(70%, 40px, 40px);
+            }
+        }
+
+        .contacto{
+            .icono{
+                @include icono(70%, 40px, 40px);
+            }
+        }
+}
+}
+
+
+// /* TABLET */
+@include mediaQuerys($tablet){
+    .menuProductos{
+        .menuProductos__container{
+            .card{
+                width: 47% !important;
+            }
+        }
+    }
+
+    .footer{
+        .info{
+            .icono{
+                @include icono(100%, 40px, 40px);
+            }
+        }
+
+        .contacto{
+            .icono{
+                @include icono(80%, 30px, 30px);
+            }
+        }
+    }
+}
+
+
+
+// /* PHONES */
+@include mediaQuerys($phone){
+    .header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+
+    .menu{
+        a{
+            font-size: 17px;
+            padding: 9px;
+            justify-content: space-around;
+        }
+    }
+    .menuProductos{
+        .menuProductos__container{
+            .card{
+                width: 100% !important;
+            }
+        }
+    }
+    
+
+    .footer{
+        &__container{
+            grid-template-columns: 1fr !important;
+        }
+    }
+}
+

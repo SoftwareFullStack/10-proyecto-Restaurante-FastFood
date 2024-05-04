@@ -1,0 +1,27 @@
+.footer{
+    &__container{
+        @include displayGrid(1fr 1fr, auto, 20px);
+        padding: 50px 0;
+        color: $white;
+
+        .info{
+            .icono{
+                @include icono(60%, 50px, 50px);
+            }
+        }
+
+        .contacto{
+            .icono{
+                @include icono(40%, 50px, 50px);
+
+                a{
+                    background-color: transparent;
+
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

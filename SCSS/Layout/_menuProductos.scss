@@ -1,0 +1,5 @@
+.menuProductos{
+    .menuProductos__container{
+        @include displayFlex(space-between, center, row wrap);
+    }
+}
